@@ -1,13 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Page</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tighthead Technologies | Aerospace, Autonomous Systems & Engineering Consultancy</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            gold: '#E5B008',
+                            dark: '#0F172A'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-  <h1>Hello, world</h1>
-  <p>This is my static site.</p>
+<body class="h-[100dvh] w-screen overflow-hidden bg-[#FFFFFF] text-[#0F172A] font-sans antialiased flex flex-col justify-between items-center px-6 py-6 sm:py-8 selection:bg-[#E5B008]/30 selection:text-[#0F172A]">
+
+    <!-- Subtle Top Accent Line -->
+    <div class="w-12 h-1 rounded-full bg-[#E5B008]/80 shrink-0" aria-hidden="true"></div>
+
+    <!-- Centered Core Identity Block -->
+    <main class="w-full max-w-3xl flex flex-col items-center justify-center text-center my-auto">
+        
+        <!-- Prominent Logo -->
+        <div class="mb-6 sm:mb-8">
+            <img 
+                src="Final.png" 
+                alt="Tighthead Technologies Logo" 
+                class="h-24 sm:h-32 md:h-36 w-auto mx-auto object-contain select-none"
+                onerror="this.onerror=null; this.src='https://placehold.co/360x140/FFFFFF/0F172A?text=Tighthead+Technologies';"
+            >
+        </div>
+
+        <!-- Concise Tagline -->
+        <p class="text-base sm:text-xl md:text-2xl font-medium text-[#0F172A] tracking-tight max-w-xl leading-snug">
+            Aerospace, Autonomous Systems &amp; Engineering Consultancy
+        </p>
+
+        <!-- Compact Disciplines List -->
+        <div class="mt-5 sm:mt-6 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 max-w-2xl" aria-label="Core Disciplines">
+            <span class="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200/80">Aircraft</span>
+            <span class="text-[#E5B008] text-xs select-none" aria-hidden="true">&bull;</span>
+            <span class="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200/80">Drones</span>
+            <span class="text-[#E5B008] text-xs select-none" aria-hidden="true">&bull;</span>
+            <span class="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200/80">Robotics</span>
+            <span class="text-[#E5B008] text-xs select-none" aria-hidden="true">&bull;</span>
+            <span class="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200/80">Software</span>
+            <span class="text-[#E5B008] text-xs select-none" aria-hidden="true">&bull;</span>
+            <span class="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200/80">Data Analysis</span>
+            <span class="text-[#E5B008] text-xs select-none" aria-hidden="true">&bull;</span>
+            <span class="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200/80">Electricals</span>
+        </div>
+
+        <!-- Minimal Contact Action -->
+        <div class="mt-7 sm:mt-9 flex flex-col items-center gap-2.5">
+            <a href="mailto:info@tightheadtech.com" 
+               class="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-[#0F172A] text-white text-xs sm:text-sm font-semibold tracking-wide hover:bg-slate-800 transition-all duration-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#E5B008] focus:ring-offset-2">
+                <span>Get in Touch</span>
+                <span class="w-1.5 h-1.5 rounded-full bg-[#E5B008]"></span>
+            </a>
+            <a href="mailto:info@tightheadtech.com" class="text-xs text-slate-500 hover:text-[#0F172A] transition-colors">
+                info@tightheadtech.com
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Minimal Bottom Footer -->
+    <footer class="w-full text-center shrink-0">
+        <p class="text-[11px] sm:text-xs text-slate-400 tracking-wide">
+            &copy; 2026 Tighthead Technologies LLC &bull; Atlanta, GA
+        </p>
+    </footer>
+
 </body>
 </html>
