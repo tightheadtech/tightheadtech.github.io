@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F172A'/%3E%3Ctext x='32' y='42' font-family='system-ui,sans-serif' font-weight='900' font-size='24' fill='%23FFFFFF' text-anchor='middle'%3ETH%3Ctspan fill='%23E5B008'%3ET%3C/tspan%3E%3C/text%3E%3C/svg%3E" />
     <title>Tighthead Technologies</title>
+    <!-- Inline SVG Browser Tab Icon (Favicon) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F172A'/%3E%3Ctext x='32' y='42' font-family='system-ui,sans-serif' font-weight='900' font-size='24' fill='%23FFFFFF' text-anchor='middle'%3ETH%3Ctspan fill='%23E5B008'%3ET%3C/tspan%3E%3C/text%3E%3C/svg%3E" />
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -30,136 +31,304 @@
         }
     </script>
 </head>
-<body class="h-[100dvh] w-screen overflow-hidden bg-[#FFFFFF] text-[#0F172A] font-sans antialiased flex flex-col justify-between items-center px-6 py-6 sm:py-8 selection:bg-[#E5B008]/30 selection:text-[#0F172A]">
+<body class="bg-[#FFFFFF] text-[#0F172A] font-sans antialiased selection:bg-[#E5B008]/30 selection:text-[#0F172A]">
 
-    <!-- Subtle Top Accent Line -->
-    <div class="w-12 h-1 rounded-full bg-[#E5B008]/80 shrink-0" aria-hidden="true"></div>
-
-    <!-- Centered Core Identity Block -->
-    <main class="w-full max-w-3xl flex flex-col items-center justify-center text-center my-auto">
+    <!-- =====================================================================
+         VIEW 1: HOME (Strictly Non-Scrolling 100dvh Viewport)
+    ====================================================================== -->
+    <div id="home-view" class="h-[100dvh] w-screen overflow-hidden flex flex-col justify-between items-center px-6 py-6 sm:py-8">
         
-        <!-- Prominent Logo with Exact Inline SVG Fallback -->
-        <div class="mb-6 sm:mb-8 flex items-center justify-center">
-            <img 
-                id="brand-logo-img"
-                src="Final.png" 
-                alt="Tighthead Technologies Logo" 
-                class="w-64 sm:w-80 max-h-36 h-auto mx-auto object-contain select-none"
-                onerror="this.classList.add('hidden'); document.getElementById('brand-logo-svg').classList.remove('hidden');"
-            >
-            <!-- Fallback Inline SVG matching Final.png (Black T-H, Gold Italicized T, Gold 'Tighthead', Black 'Technologies') -->
-            <svg 
-                id="brand-logo-svg" 
-                class="hidden w-64 sm:w-80 max-h-36 h-auto mx-auto select-none" 
-                viewBox="0 0 800 570" 
-                xmlns="http://www.w3.org/2000/svg"
-                role="img"
-                aria-label="Tighthead Technologies Logo"
-            >
-                <!-- Left Black T -->
-                <path d="M45 45 H265 V98 H186 V300 H124 V98 H45 Z" fill="#000000"/>
-                <!-- Middle Black H (notched at top-right for Gold T clearance) -->
-                <path d="M287 45 H349 V142 H436 V45 H486 C468 65 460 92 462 120 H498 V300 H436 V195 H349 V300 H287 Z" fill="#000000"/>
-                <!-- Right Gold Stylized T -->
-                <path d="M535 45 H755 C755 82 726 102 688 102 H670 L632 300 H570 L608 102 H480 C482 68 504 45 535 45 Z" fill="#E5B008"/>
-                <!-- Gold 'Tighthead' Wordmark -->
-                <text x="400" y="422" text-anchor="middle" fill="#E5B008" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="112" letter-spacing="-1.5">Tighthead</text>
-                <!-- Black 'Technologies' Wordmark -->
-                <text x="400" y="528" text-anchor="middle" fill="#000000" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="108" letter-spacing="-1">Technologies</text>
-            </svg>
-        </div>
-
-        <!-- Concise Tagline -->
-        <p class="text-base sm:text-xl md:text-2xl font-medium text-[#0F172A] tracking-tight max-w-xl leading-snug">
-            An engineering consultancy with a particular focus on Aerospace and Autonomous Systems
-        </p>
-
-        <!-- Compact Disciplines List -->
-<div class="mt-5 sm:mt-6 flex flex-col items-center gap-2 sm:gap-2.5" aria-label="Core Disciplines">
-    <!-- Row 1: 4 items -->
-    <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
-        <span class="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200/80">Aerospace</span>
-        <span class="text-[#E5B008] text-xs select-none" aria-hidden="true">•</span>
-        <span class="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200/80">Drones</span>
-        <span class="text-[#E5B008] text-xs select-none" aria-hidden="true">•</span>
-        <span class="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200/80">Robotics</span>
-        <span class="text-[#E5B008] text-xs select-none" aria-hidden="true">•</span>
-        <span class="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200/80">Embedded Systems</span>
-    </div>
-
-    <!-- Row 2: 4 items -->
-    <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
-        <span class="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200/80">Software</span>
-        <span class="text-[#E5B008] text-xs select-none" aria-hidden="true">•</span>
-        <span class="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200/80">Data Analysis</span>
-        <span class="text-[#E5B008] text-xs select-none" aria-hidden="true">•</span>
-        <span class="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200/80">Electrification</span>
-        <span class="text-[#E5B008] text-xs select-none" aria-hidden="true">•</span>
-        <span class="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200/80">Experimental Testing</span>
-    </div>
-</div>
-
-        <!-- Emphasized Contact Us Callout -->
-        <div class="mt-8 sm:mt-10 flex flex-col items-center">
-            <div class="group inline-flex items-center gap-2.5 sm:gap-3 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-slate-50/90 border border-slate-200/90 hover:border-[#E5B008] transition-all duration-200 shadow-xs">
-                <span class="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-[#E5B008] select-none">
-                    Contact Us
-                </span>
-                <span class="h-3.5 w-[1px] bg-slate-200" aria-hidden="true"></span>
-                <a href="mailto:info@tightheadtech.com" class="text-sm sm:text-base font-semibold text-[#0F172A] hover:text-[#E5B008] transition-colors">
-                    info@tightheadtech.com
-                </a>
+        <!-- Top Header Bar with Centered Accent & Subtle "Why Tighthead?" Button -->
+        <header class="relative z-50 pointer-events-auto w-full max-w-5xl grid grid-cols-3 items-center shrink-0">
+            <div></div>
+            <div class="flex justify-center">
+                <div class="w-12 h-1 rounded-full bg-[#E5B008]/80" aria-hidden="true"></div>
+            </div>
+            <nav class="flex justify-end">
                 <button 
-                    type="button" 
-                    onclick="copyEmail(this)" 
-                    title="Copy email address" 
-                    aria-label="Copy email address"
-                    class="ml-0.5 p-1 rounded-full text-slate-400 hover:text-[#0F172A] hover:bg-slate-200/60 transition-colors focus:outline-none"
+                    id="btn-why-tighthead"
+                    type="button"
+                    class="relative z-50 pointer-events-auto cursor-pointer inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium text-slate-500 hover:text-[#0F172A] hover:bg-slate-50 transition-colors group focus:outline-none"
                 >
-                    <!-- Copy Icon -->
-                    <svg class="copy-icon w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    <!-- Checkmark Feedback Icon -->
-                    <svg class="check-icon hidden w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                        <polyline points="20 6 9 17 4 12"></polyline>
+                    <span>Why Tighthead?</span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#E5B008] group-hover:scale-125 transition-transform" aria-hidden="true"></span>
+                </button>
+            </nav>
+        </header>
+
+        <!-- Centered Core Identity Block -->
+        <main class="w-full max-w-3xl flex flex-col items-center justify-center text-center my-auto">
+            
+            <!-- Prominent Logo with Exact Inline SVG Fallback -->
+            <div class="mb-6 sm:mb-8 flex items-center justify-center">
+                <img 
+                    id="brand-logo-img"
+                    src="Final.png" 
+                    alt="Tighthead Technologies Logo" 
+                    class="w-64 sm:w-80 max-h-36 h-auto mx-auto object-contain select-none"
+                    onerror="this.classList.add('hidden'); document.getElementById('brand-logo-svg').classList.remove('hidden');"
+                >
+                <!-- Fallback Inline SVG matching Final.png -->
+                <svg 
+                    id="brand-logo-svg" 
+                    class="hidden w-64 sm:w-80 max-h-36 h-auto mx-auto select-none" 
+                    viewBox="0 0 800 570" 
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img"
+                    aria-label="Tighthead Technologies Logo"
+                >
+                    <path d="M45 45 H265 V98 H186 V300 H124 V98 H45 Z" fill="#000000"/>
+                    <path d="M287 45 H349 V142 H436 V45 H486 C468 65 460 92 462 120 H498 V300 H436 V195 H349 V300 H287 Z" fill="#000000"/>
+                    <path d="M535 45 H755 C755 82 726 102 688 102 H670 L632 300 H570 L608 102 H480 C482 68 504 45 535 45 Z" fill="#E5B008"/>
+                    <text x="400" y="422" text-anchor="middle" fill="#E5B008" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="112" letter-spacing="-1.5">Tighthead</text>
+                    <text x="400" y="528" text-anchor="middle" fill="#000000" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="108" letter-spacing="-1">Technologies</text>
+                </svg>
+            </div>
+
+            <!-- Concise Tagline -->
+            <p class="text-base sm:text-xl md:text-2xl font-medium text-[#0F172A] tracking-tight max-w-2xl leading-snug">
+                Engineering precision across aerospace, autonomous systems, software, data, and electrification.
+            </p>
+
+            <!-- Balanced 2-Row Core Disciplines -->
+            <div class="mt-5 sm:mt-6 flex flex-col items-center gap-2 sm:gap-2.5" aria-label="Core Disciplines">
+                <!-- Row 1: 5 items -->
+                <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
+                    <span class="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200/80">Aerospace</span>
+                    <span class="text-[#E5B008] text-xs select-none" aria-hidden="true">&bull;</span>
+                    <span class="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200/80">Drones</span>
+                    <span class="text-[#E5B008] text-xs select-none" aria-hidden="true">&bull;</span>
+                    <span class="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200/80">Robotics</span>
+                    <span class="text-[#E5B008] text-xs select-none" aria-hidden="true">&bull;</span>
+                    <span class="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200/80">Embedded Systems</span>
+                    <span class="text-[#E5B008] text-xs select-none" aria-hidden="true">&bull;</span>
+                    <span class="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200/80">Software</span>
+                </div>
+
+                <!-- Row 2: 4 items -->
+                <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
+                    <span class="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200/80">Data Analysis</span>
+                    <span class="text-[#E5B008] text-xs select-none" aria-hidden="true">&bull;</span>
+                    <span class="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200/80">Electrification</span>
+                    <span class="text-[#E5B008] text-xs select-none" aria-hidden="true">&bull;</span>
+                    <span class="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200/80">Ground Testing</span>
+                    <span class="text-[#E5B008] text-xs select-none" aria-hidden="true">&bull;</span>
+                    <span class="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200/80">Flight Testing</span>
+                </div>
+            </div>
+
+            <!-- Emphasized Contact Us Callout -->
+            <div class="mt-8 sm:mt-10 flex flex-col items-center">
+                <div class="group inline-flex items-center gap-2.5 sm:gap-3 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-slate-50/90 border border-slate-200/90 hover:border-[#E5B008] transition-all duration-200 shadow-xs">
+                    <span class="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-[#E5B008] select-none">
+                        Contact Us
+                    </span>
+                    <span class="h-3.5 w-[1px] bg-slate-200" aria-hidden="true"></span>
+                    <a href="mailto:info@tightheadtech.com" class="text-sm sm:text-base font-semibold text-[#0F172A] hover:text-[#E5B008] transition-colors">
+                        info@tightheadtech.com
+                    </a>
+                    <button 
+                        id="btn-copy-email"
+                        type="button" 
+                        title="Copy email address" 
+                        aria-label="Copy email address"
+                        class="ml-0.5 p-1 rounded-full text-slate-400 hover:text-[#0F172A] hover:bg-slate-200/60 transition-colors focus:outline-none cursor-pointer"
+                    >
+                        <!-- Copy Icon -->
+                        <svg class="copy-icon w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        <!-- Checkmark Feedback Icon -->
+                        <svg class="check-icon hidden w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Minimal Bottom Footer -->
+        <footer class="w-full text-center shrink-0">
+            <p class="text-[11px] sm:text-xs text-slate-400 tracking-wide">
+                &copy; 2026 Tighthead Technologies LLC &bull; Atlanta, GA
+            </p>
+        </footer>
+    </div>
+
+    <!-- =====================================================================
+         VIEW 2: WHY TIGHTHEAD? (Hidden by default, scrollable when active)
+    ====================================================================== -->
+    <div id="why-tighthead-view" class="hidden min-h-screen w-full flex flex-col justify-between bg-[#FFFFFF]">
+        
+        <!-- Top Navigation Bar -->
+        <header class="relative z-50 pointer-events-auto w-full border-b border-slate-100 bg-white/95 backdrop-blur-xs sticky top-0">
+            <div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+                <button 
+                    id="btn-logo-home"
+                    type="button" 
+                    aria-label="Tighthead Technologies Home" 
+                    class="relative z-50 pointer-events-auto cursor-pointer flex items-center focus:outline-none"
+                >
+                    <img 
+                        src="Final.png" 
+                        alt="Tighthead Technologies" 
+                        class="h-8 w-auto object-contain"
+                        onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');"
+                    >
+                    <svg class="hidden h-7 w-auto" viewBox="0 0 800 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="THT">
+                        <path d="M45 45 H265 V98 H186 V300 H124 V98 H45 Z" fill="#000000"/>
+                        <path d="M287 45 H349 V142 H436 V45 H486 C468 65 460 92 462 120 H498 V300 H436 V195 H349 V300 H287 Z" fill="#000000"/>
+                        <path d="M535 45 H755 C755 82 726 102 688 102 H670 L632 300 H570 L608 102 H480 C482 68 504 45 535 45 Z" fill="#E5B008"/>
                     </svg>
                 </button>
+
+                <button 
+                    id="btn-back-home"
+                    type="button" 
+                    class="relative z-50 pointer-events-auto cursor-pointer inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium text-slate-600 hover:text-[#0F172A] hover:bg-slate-50 transition-colors group focus:outline-none"
+                >
+                    <span class="transition-transform group-hover:-translate-x-0.5">&larr;</span>
+                    <span>Back to Home</span>
+                </button>
             </div>
-        </div>
+        </header>
 
-    </main>
-
-    <!-- Minimal Bottom Footer -->
-    <footer class="w-full text-center shrink-0">
-        <p class="text-[11px] sm:text-xs text-slate-400 tracking-wide">
-            &copy; 2026 Tighthead Technologies LLC &bull; Atlanta, GA
-        </p>
-    </footer>
-
-    <!-- Copy to Clipboard Script -->
-    <script>
-        function copyEmail(btn) {
-            const email = 'info@tightheadtech.com';
-            const tempInput = document.createElement('input');
-            tempInput.value = email;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand('copy');
-            document.body.removeChild(tempInput);
-
-            const copyIcon = btn.querySelector('.copy-icon');
-            const checkIcon = btn.querySelector('.check-icon');
+        <!-- Streamlined Content Container -->
+        <main class="max-w-3xl w-full mx-auto px-6 py-12 sm:py-16 my-auto">
             
-            copyIcon.classList.add('hidden');
-            checkIcon.classList.remove('hidden');
+            <!-- Editorial Header & Narrative -->
+            <div class="space-y-5">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-50 border border-slate-200/80">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#E5B008]"></span>
+                    <span class="text-[11px] font-semibold uppercase tracking-widest text-slate-600">Our Name &amp; Ethos</span>
+                </div>
 
-            setTimeout(() => {
-                checkIcon.classList.add('hidden');
-                copyIcon.classList.remove('hidden');
-            }, 1800);
-        }
+                <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0F172A]">
+                    Why <span class="text-[#E5B008]">Tighthead</span>?
+                </h1>
+
+                <p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+                    In rugby, the <strong class="font-semibold text-[#0F172A]">tighthead prop (#3)</strong> anchors the right side of the scrum—binding between two opposing front-rowers to absorb immense force without fanfare and provide the unshakable platform the rest of the team relies on. Tightheads aren&rsquo;t loud or flashy; they carry the quiet, earned confidence of knowing their strength is what keeps everything steady when the pressure is highest.
+                </p>
+
+                <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+                    That same foundational reliability defines Tighthead Technologies: no hype or theatrics—just disciplined, rock-solid engineering execution on complex technical challenges.
+                </p>
+            </div>
+
+            <!-- YouTube Video Showcase -->
+            <section class="mt-10 sm:mt-12" aria-label="Tighthead Prop Video Showcase">
+                <div class="rounded-2xl overflow-hidden border border-slate-200/90 bg-slate-950 shadow-sm">
+                    <div class="relative w-full aspect-video">
+                        <iframe 
+                            class="absolute inset-0 w-full h-full"
+                            src="https://www.youtube.com/embed/LdlIj_HFdCE" 
+                            title="Tight-head Prop - The Most Important Position in Rugby"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                </div>
+
+                <!-- Direct YouTube Reference Links -->
+                <div class="mt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs sm:text-sm text-slate-500">
+                    <a 
+                        href="https://www.youtube.com/watch?v=LdlIj_HFdCE" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-1.5 font-medium text-[#0F172A] hover:text-[#E5B008] transition-colors"
+                    >
+                        <span>Watch on YouTube: Tight-head Prop — The Most Important Position in Rugby</span>
+                        <span aria-hidden="true">&nearr;</span>
+                    </a>
+                    <a 
+                        href="https://www.youtube.com/watch?v=HwebiTpyRkM" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-1.5 text-slate-500 hover:text-[#0F172A] transition-colors"
+                    >
+                        <span>Adam Jones Tighthead Masterclass</span>
+                        <span aria-hidden="true">&nearr;</span>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Minimal Bottom Footer -->
+        <footer class="w-full py-6 text-center border-t border-slate-100">
+            <p class="text-[11px] sm:text-xs text-slate-400 tracking-wide">
+                &copy; 2026 Tighthead Technologies LLC &bull; Atlanta, GA
+            </p>
+        </footer>
+    </div>
+
+    <!-- Clean DOM View Toggling & Copy to Clipboard Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const homeView = document.getElementById('home-view');
+            const whyView = document.getElementById('why-tighthead-view');
+            const btnWhyTighthead = document.getElementById('btn-why-tighthead');
+            const btnBackHome = document.getElementById('btn-back-home');
+            const btnLogoHome = document.getElementById('btn-logo-home');
+            const btnCopyEmail = document.getElementById('btn-copy-email');
+
+            function showHomeView() {
+                if (whyView && homeView) {
+                    whyView.classList.add('hidden');
+                    homeView.classList.remove('hidden');
+                    window.scrollTo(0, 0);
+                }
+            }
+
+            function showWhyView() {
+                if (homeView && whyView) {
+                    homeView.classList.add('hidden');
+                    whyView.classList.remove('hidden');
+                    window.scrollTo(0, 0);
+                }
+            }
+
+            if (btnWhyTighthead) {
+                btnWhyTighthead.addEventListener('click', showWhyView);
+            }
+
+            if (btnBackHome) {
+                btnBackHome.addEventListener('click', showHomeView);
+            }
+
+            if (btnLogoHome) {
+                btnLogoHome.addEventListener('click', showHomeView);
+            }
+
+            if (btnCopyEmail) {
+                btnCopyEmail.addEventListener('click', () => {
+                    const email = 'info@tightheadtech.com';
+                    const tempInput = document.createElement('input');
+                    tempInput.value = email;
+                    document.body.appendChild(tempInput);
+                    tempInput.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(tempInput);
+
+                    const copyIcon = btnCopyEmail.querySelector('.copy-icon');
+                    const checkIcon = btnCopyEmail.querySelector('.check-icon');
+
+                    if (copyIcon && checkIcon) {
+                        copyIcon.classList.add('hidden');
+                        checkIcon.classList.remove('hidden');
+
+                        setTimeout(() => {
+                            checkIcon.classList.add('hidden');
+                            copyIcon.classList.remove('hidden');
+                        }, 1800);
+                    }
+                });
+            }
+        });
     </script>
 
 </body>
